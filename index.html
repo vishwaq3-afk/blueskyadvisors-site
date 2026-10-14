@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bluesky Advisors</title>
+<meta name="description" content="Bluesky Advisors was started by former and current senior leaders. Our purpose is literacy and education across finance, business, technology and career.">
+<meta property="og:title" content="Bluesky Advisors">
+<meta property="og:description" content="People who have been through it, teaching what they learned.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blueskyadvisors.pro/">
+<link rel="canonical" href="https://blueskyadvisors.pro/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='6' fill='%231B5BFF'/%3E%3Ccircle cx='18' cy='11' r='7' fill='%23FFC93C'/%3E%3Crect x='3' y='20' width='18' height='3.5' rx='1.75' fill='%2300D1FF'/%3E%3Crect x='13' y='25' width='18' height='3.5' rx='1.75' fill='%23FF6B5B'/%3E%3Crect x='6' y='30' width='18' height='3.5' rx='1.75' fill='%237CF2C1'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&amp;family=DM+Sans:wght@400;500;700&amp;display=swap">
+<style>
+:root{
+  --blue:#1B5BFF; --cyan:#00D1FF; --yellow:#FFC93C; --coral:#FF6B5B; --mint:#7CF2C1;
+  --navy:#07163D; --ink:#2B3F66; --pale:#EEF4FF; --white:#FFFFFF;
+  --display:'Unbounded', system-ui, sans-serif;
+  --body:'DM Sans', system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--white);color:var(--navy);font-family:var(--body);font-size:17px;line-height:1.6}
+a{color:var(--blue)}
+a:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:24px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
+.h2{font-size:36px;line-height:1.15;font-weight:600;letter-spacing:-.025em}
+
+/* Hero */
+.hero{background:var(--blue);color:var(--white);overflow:hidden}
+.nav{padding-top:22px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--white)}
+.logo{display:flex;align-items:center;justify-content:center;padding:5px;background:var(--blue);border:3px solid #000;border-radius:8px}
+.brand span{font-family:var(--display);font-size:18px;font-weight:600;letter-spacing:-.01em}
+.nav-links{display:flex;flex-wrap:wrap;align-items:center;gap:28px;font-size:15px;font-weight:500}
+.nav-links a{color:var(--white);text-decoration:none}
+.nav-links a:hover{text-decoration:underline;text-underline-offset:4px}
+.hero-grid{padding-block:72px 88px;display:flex;flex-wrap:wrap;align-items:center;gap:48px}
+.hero-copy{flex:1.5 1 440px;min-width:0;display:flex;flex-direction:column;gap:26px}
+.hero-copy .eyebrow{color:#BFF1FF}
+h1{font-size:52px;line-height:1.12;font-weight:600;letter-spacing:-.03em}
+h1 em{font-style:normal;color:var(--yellow)}
+.lead{max-width:640px;font-size:19px;line-height:1.6;color:#E8F0FF}
+.btns{display:flex;flex-wrap:wrap;gap:14px;padding-top:6px}
+.btn{display:inline-block;padding:15px 28px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none}
+.btn-solid{background:var(--yellow);color:var(--navy)}
+.btn-solid:hover{background:#FFD566}
+.btn-line{border:2px solid var(--white);color:var(--white);padding:13px 28px}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.hero-art{flex:1 1 280px;min-width:0;display:flex;justify-content:center}
+.hero-art svg{width:360px;max-width:100%;height:auto}
+.dashes{height:14px;background-image:repeating-linear-gradient(90deg,var(--cyan) 0,var(--cyan) 3px,transparent 3px,transparent 24px)}
+
+/* Sections */
+.split{padding-block:96px;display:flex;flex-wrap:wrap;gap:48px}
+.split-head{flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:16px}
+.split-body{flex:1.4 1 420px;min-width:0;display:flex;flex-direction:column;gap:20px;font-size:19px;line-height:1.65;color:var(--ink)}
+.team{background:var(--yellow)}
+.team .split{padding-block:88px}
+.team .eyebrow{color:var(--navy)}
+.team .split-body{color:var(--navy)}
+
+.practice{background:var(--pale)}
+.stack{padding-block:96px;display:flex;flex-direction:column;gap:48px}
+.stack-head{display:flex;flex-direction:column;gap:16px;max-width:720px}
+.cards{display:flex;flex-wrap:wrap;gap:24px}
+.card{flex:1 1 440px;min-width:0;padding:36px;border-radius:20px;display:flex;flex-direction:column;gap:12px}
+.card .tag{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.card h3{font-size:24px;line-height:1.2;font-weight:600;letter-spacing:-.02em}
+.c-blue{background:var(--blue);color:var(--white)} .c-blue .tag{color:#BFF1FF} .c-blue p{color:#E8F0FF}
+.c-cyan{background:var(--cyan);color:var(--navy)}
+.c-navy{background:var(--navy);color:var(--white)} .c-navy .tag{color:var(--yellow)} .c-navy p{color:#D5E1F7}
+.c-yellow{background:var(--yellow);color:var(--navy)}
+
+.principles{display:flex;flex-wrap:wrap;gap:40px}
+.principle{flex:1 1 280px;min-width:0;display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:6px solid var(--blue)}
+.principle:nth-child(2){border-color:var(--cyan)}
+.principle:nth-child(3){border-color:var(--yellow)}
+.principle h3{font-size:20px;line-height:1.25;font-weight:600;letter-spacing:-.02em}
+.principle p{color:var(--ink)}
+
+/* Contact + footer */
+.contact{background:var(--navy);color:var(--white)}
+.contact-grid{padding-block:88px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:40px}
+.contact-copy{flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:16px}
+.contact-copy p{max-width:560px;font-size:19px;line-height:1.6;color:#C9DAF5}
+.contact-cta{flex:0 1 340px;min-width:0;display:flex;flex-direction:column;gap:14px}
+.contact-cta .btn{text-align:center;padding:16px 28px}
+.email{font-size:16px;color:#C9DAF5;overflow-wrap:anywhere}
+.email a{color:var(--white);font-weight:700}
+footer{background:var(--navy);border-top:1px solid #263B6A;color:#A9BDE0;font-size:13px;line-height:1.6}
+.foot{padding-block:32px 48px;display:flex;flex-direction:column;gap:14px}
+.foot strong{font-family:var(--display);font-size:15px;font-weight:600;color:var(--white)}
+.foot p{max-width:900px}
+
+@media (max-width:640px){
+  body{font-size:16px}
+  h1{font-size:34px}
+  .h2{font-size:28px}
+  .hero-grid{padding-block:48px 56px}
+  .split{padding-block:64px}
+  .team .split{padding-block:56px}
+  .stack{padding-block:64px}
+  .card{padding:28px}
+  .contact-grid{padding-block:64px}
+  .nav-links{gap:18px}
+  .lead,.split-body,.contact-copy p{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Bluesky Advisors home">
+      <div class="logo"><svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="12" r="9" fill="#FFC93C"></circle><rect x="2" y="21" width="22" height="4" rx="2" fill="#00D1FF"></rect><rect x="12" y="26" width="22" height="4" rx="2" fill="#FF6B5B"></rect><rect x="5" y="31" width="22" height="4" rx="2" fill="#7CF2C1"></rect></svg></div>
+      <span>Bluesky Advisors</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#purpose">Our purpose</a>
+      <a href="#team">Who we are</a>
+      <a href="#practice">What we do</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">About us</div>
+      <h1>People who have been through it, <em>teaching what they learned.</em></h1>
+      <p class="lead">Bluesky Advisors was started by former and current senior leaders who have worked through the business, financial and technology landscape from the inside. That experience is now available to individuals, owners and teams. Our purpose is literacy and education: helping you understand your options clearly before you decide.</p>
+      <div class="btns">
+        <a class="btn btn-solid" href="#contact">Talk with us</a>
+        <a class="btn btn-line" href="#practice">What we do</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 360 380" role="img" aria-label="A sun above three clouds labeled Finance, Technology and Career">
+        <circle cx="180" cy="135" r="100" fill="#FFC93C"></circle>
+        <g transform="translate(10,170)">
+          <rect x="0" y="24" width="210" height="44" rx="22" fill="#00D1FF"></rect>
+          <circle cx="70" cy="30" r="26" fill="#00D1FF"></circle>
+          <circle cx="132" cy="24" r="32" fill="#00D1FF"></circle>
+          <text x="105" y="53" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="17" font-weight="700" fill="#07163D">Finance</text>
+        </g>
+        <g transform="translate(140,232)">
+          <rect x="0" y="24" width="210" height="44" rx="22" fill="#FF6B5B"></rect>
+          <circle cx="72" cy="28" r="28" fill="#FF6B5B"></circle>
+          <circle cx="140" cy="30" r="24" fill="#FF6B5B"></circle>
+          <text x="105" y="53" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="17" font-weight="700" fill="#07163D">Technology</text>
+        </g>
+        <g transform="translate(30,294)">
+          <rect x="0" y="24" width="210" height="44" rx="22" fill="#7CF2C1"></rect>
+          <circle cx="66" cy="28" r="28" fill="#7CF2C1"></circle>
+          <circle cx="136" cy="22" r="30" fill="#7CF2C1"></circle>
+          <text x="105" y="53" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="17" font-weight="700" fill="#07163D">Career</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="dashes" aria-hidden="true"></div>
+</header>
+
+<main>
+  <section id="purpose">
+    <div class="wrap split">
+      <div class="split-head">
+        <div class="eyebrow">Our purpose</div>
+        <h2 class="h2">Education comes first.</h2>
+      </div>
+      <div class="split-body">
+        <p>Big decisions about money, a business or a career are often made with half the picture, because nobody ever taught the rules or the vocabulary.</p>
+        <p>We start by teaching. We explain how things work, what the trade-offs are and which questions are worth asking. We say plainly what we know and where our experience ends. Then the decision is yours.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="team" id="team">
+    <div class="wrap split">
+      <div class="split-head">
+        <div class="eyebrow">Who we are</div>
+        <h2 class="h2">Leaders who have done the work.</h2>
+      </div>
+      <div class="split-body">
+        <p>Bluesky Advisors is led by former and current senior leaders. We bring operating experience, not theory, from the organizations where these decisions are made every day.</p>
+        <p>Around that core is a small circle of practitioners who share one commitment: teach first, advise second.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="practice" id="practice">
+    <div class="wrap stack">
+      <div class="stack-head">
+        <div class="eyebrow">What we do</div>
+        <h2 class="h2">Four ways we help.</h2>
+      </div>
+      <div class="cards">
+        <article class="card c-blue">
+          <div class="tag">Finance</div>
+          <h3>Individuals and families</h3>
+          <p>Financial literacy and protection planning for people and households, explained step by step so you know what each choice does before you make it.</p>
+        </article>
+        <article class="card c-cyan">
+          <div class="tag">Business</div>
+          <h3>Small business owners</h3>
+          <p>Practical guidance on the decisions that keep a small business steady, in plain language you can act on, without needing to hire a department to understand it.</p>
+        </article>
+        <article class="card c-navy">
+          <div class="tag">Technology</div>
+          <h3>Technical advisory</h3>
+          <p>Advice on enterprise technology, vendor and workforce programs, data and AI, drawn from hands-on experience inside large organizations.</p>
+        </article>
+        <article class="card c-yellow">
+          <div class="tag">Career</div>
+          <h3>Life coaching</h3>
+          <p>Structured conversations to help you weigh a career move, a transition or a long-term goal, and turn it into a plan you believe in.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap stack">
+      <div class="stack-head">
+        <div class="eyebrow">How we work</div>
+        <h2 class="h2">We explain. You decide.</h2>
+      </div>
+      <div class="principles">
+        <div class="principle">
+          <h3>Teach before recommending</h3>
+          <p>We explain how something works before we talk about what to do with it.</p>
+        </div>
+        <div class="principle">
+          <h3>Plain language</h3>
+          <p>If we use a term of art, we define it. If we cannot explain it simply, we keep working on it.</p>
+        </div>
+        <div class="principle">
+          <h3>Your decision</h3>
+          <p>We lay out the options and the trade-offs. The choice, and the pace, belong to you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-copy">
+        <h2 class="h2">Start with a conversation.</h2>
+        <p>Tell us what you are trying to understand. We will tell you whether we can help, and where to look if we cannot.</p>
+      </div>
+      <div class="contact-cta">
+        <a class="btn btn-solid" href="mailto:info@blueskyadvisors.pro?subject=Hello%20Bluesky%20Advisors">Email us</a>
+        <div class="email"><a href="mailto:info@blueskyadvisors.pro">info@blueskyadvisors.pro</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <strong>Bluesky Advisors</strong>
+    <p>[Required disclosures: licensing, affiliations and service information. Add after compliance review.]</p>
+    <div>&copy; 2026 Bluesky Advisors. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
