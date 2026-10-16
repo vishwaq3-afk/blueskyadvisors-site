@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Technology and AI for Small Business | Bluesky Advisors</title>
+<meta name="description" content="Big-firm rigor for small businesses. We map your processes, find where technology and AI can help, negotiate with vendors and deliver the solution, from a website to a full implementation.">
+<meta property="og:title" content="Technology and AI for Small Business | Bluesky Advisors">
+<meta property="og:description" content="No problem is too small. From managing a website to a full technology implementation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blueskyadvisors.pro/technology/">
+<link rel="canonical" href="https://blueskyadvisors.pro/technology/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='6' fill='%231B5BFF'/%3E%3Ccircle cx='18' cy='11' r='7' fill='%23FFC93C'/%3E%3Crect x='3' y='20' width='18' height='3.5' rx='1.75' fill='%2300D1FF'/%3E%3Crect x='13' y='25' width='18' height='3.5' rx='1.75' fill='%23FF6B5B'/%3E%3Crect x='6' y='30' width='18' height='3.5' rx='1.75' fill='%237CF2C1'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&amp;family=DM+Sans:wght@400;500;700&amp;display=swap">
+<style>
+:root{
+  --blue:#1B5BFF; --cyan:#00D1FF; --yellow:#FFC93C; --coral:#FF6B5B; --mint:#7CF2C1;
+  --navy:#07163D; --ink:#2B3F66; --pale:#EEF4FF; --white:#FFFFFF;
+  --display:'Unbounded', system-ui, sans-serif;
+  --body:'DM Sans', system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--white);color:var(--navy);font-family:var(--body);font-size:17px;line-height:1.6}
+a{color:var(--blue)}
+a:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:24px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
+.h2{font-size:36px;line-height:1.15;font-weight:600;letter-spacing:-.025em}
+
+/* Hero */
+.hero{background:var(--blue);color:var(--white);overflow:hidden}
+.nav{padding-top:22px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--white)}
+.logo{display:flex;align-items:center;justify-content:center;padding:5px;background:var(--blue);border:3px solid #000;border-radius:8px}
+.brand span{font-family:var(--display);font-size:18px;font-weight:600;letter-spacing:-.01em}
+.nav-links{display:flex;flex-wrap:wrap;align-items:center;gap:28px;font-size:15px;font-weight:500}
+.nav-links a{color:var(--white);text-decoration:none}
+.nav-links a:hover{text-decoration:underline;text-underline-offset:4px}
+.nav-links a[aria-current="page"]{text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--yellow);text-decoration-thickness:3px}
+.hero-grid{padding-block:72px 88px;display:flex;flex-direction:column;align-items:flex-start;gap:26px}
+.hero-grid > *{max-width:860px}
+.hero .eyebrow{color:#BFF1FF}
+h1{font-size:48px;line-height:1.12;font-weight:600;letter-spacing:-.03em}
+h1 em{font-style:normal;color:var(--yellow)}
+.lead{max-width:680px;font-size:19px;line-height:1.6;color:#E8F0FF}
+.btns{display:flex;flex-wrap:wrap;gap:14px;padding-top:6px}
+.btn{display:inline-block;padding:15px 28px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none}
+.btn-solid{background:var(--yellow);color:var(--navy)}
+.btn-solid:hover{background:#FFD566}
+.btn-line{border:2px solid var(--white);color:var(--white);padding:13px 28px}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.dashes{height:14px;background-image:repeating-linear-gradient(90deg,var(--cyan) 0,var(--cyan) 3px,transparent 3px,transparent 24px)}
+
+/* Generic section blocks */
+.stack{padding-block:96px;display:flex;flex-direction:column;gap:48px}
+.stack-head{display:flex;flex-direction:column;gap:16px;max-width:760px}
+.stack-head p{font-size:19px;line-height:1.65;color:var(--ink)}
+
+/* Process (a real sequence, so numbered) */
+.steps{display:flex;flex-wrap:wrap;gap:32px;counter-reset:step}
+.step{flex:1 1 240px;min-width:0;display:flex;flex-direction:column;gap:12px;padding-top:20px;border-top:6px solid var(--blue)}
+.step:nth-child(2){border-color:var(--cyan)}
+.step:nth-child(3){border-color:var(--yellow)}
+.step:nth-child(4){border-color:var(--coral)}
+.step-n{width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600;font-size:16px}
+.step h3{font-size:20px;line-height:1.25;font-weight:600;letter-spacing:-.02em}
+.step p{color:var(--ink)}
+
+/* Offerings */
+.offer{background:var(--pale)}
+.cards{display:flex;flex-wrap:wrap;gap:24px}
+.card{flex:1 1 440px;min-width:0;padding:36px;border-radius:20px;display:flex;flex-direction:column;gap:12px}
+.card .tag{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.card h3{font-size:24px;line-height:1.2;font-weight:600;letter-spacing:-.02em}
+.c-blue{background:var(--blue);color:var(--white)} .c-blue .tag{color:#BFF1FF} .c-blue p{color:#E8F0FF}
+.c-cyan{background:var(--cyan);color:var(--navy)}
+.c-navy{background:var(--navy);color:var(--white)} .c-navy .tag{color:var(--yellow)} .c-navy p{color:#D5E1F7}
+.c-yellow{background:var(--yellow);color:var(--navy)}
+
+/* Engagement ladder: size grows as you go down */
+.ladder{display:flex;flex-direction:column;gap:14px;list-style:none;margin:0;padding:0}
+.rung{--i:0;margin-left:calc(var(--i) * 6%);padding:22px 28px;border-radius:16px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 24px}
+.rung h3{font-size:20px;line-height:1.25;font-weight:600;letter-spacing:-.02em;flex:0 1 300px;min-width:0}
+.rung p{flex:1 1 280px;min-width:0}
+.rung:nth-child(1){--i:0;background:var(--cyan);color:var(--navy)}
+.rung:nth-child(2){--i:1;background:var(--mint);color:var(--navy)}
+.rung:nth-child(3){--i:2;background:var(--yellow);color:var(--navy)}
+.rung:nth-child(4){--i:3;background:var(--coral);color:var(--navy)}
+.rung:nth-child(5){--i:4;background:var(--blue);color:var(--white)}
+.rung:nth-child(5) p{color:#E8F0FF}
+
+/* Statement band */
+.band{background:var(--yellow)}
+.band-grid{padding-block:80px;display:flex;flex-wrap:wrap;align-items:center;gap:32px 56px}
+.band h2{flex:1 1 340px;min-width:0;font-size:36px;line-height:1.15;font-weight:600;letter-spacing:-.025em}
+.band p{flex:1.3 1 420px;min-width:0;font-size:19px;line-height:1.65}
+
+/* Contact + footer */
+.contact{background:var(--navy);color:var(--white)}
+.contact-grid{padding-block:88px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:40px}
+.contact-copy{flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:16px}
+.contact-copy p{max-width:560px;font-size:19px;line-height:1.6;color:#C9DAF5}
+.contact-cta{flex:0 1 340px;min-width:0;display:flex;flex-direction:column;gap:14px}
+.contact-cta .btn{text-align:center;padding:16px 28px}
+.email{font-size:16px;color:#C9DAF5;overflow-wrap:anywhere}
+.email a{color:var(--white);font-weight:700}
+footer{background:var(--navy);border-top:1px solid #263B6A;color:#A9BDE0;font-size:13px;line-height:1.6}
+.foot{padding-block:32px 48px;display:flex;flex-direction:column;gap:14px}
+.foot strong{font-family:var(--display);font-size:15px;font-weight:600;color:var(--white)}
+
+@media (max-width:640px){
+  body{font-size:16px}
+  h1{font-size:32px}
+  .h2,.band h2{font-size:28px}
+  .hero-grid{padding-block:48px 56px}
+  .stack{padding-block:64px}
+  .card{padding:28px}
+  .rung{margin-left:calc(var(--i) * 2.5%);padding:20px}
+  .band-grid{padding-block:56px}
+  .contact-grid{padding-block:64px}
+  .nav-links{gap:18px}
+  .lead,.stack-head p,.band p,.contact-copy p{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="wrap nav">
+    <a class="brand" href="/" aria-label="Bluesky Advisors home">
+      <div class="logo"><svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="12" r="9" fill="#FFC93C"></circle><rect x="2" y="21" width="22" height="4" rx="2" fill="#00D1FF"></rect><rect x="12" y="26" width="22" height="4" rx="2" fill="#FF6B5B"></rect><rect x="5" y="31" width="22" height="4" rx="2" fill="#7CF2C1"></rect></svg></div>
+      <span>Bluesky Advisors</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="#how">How we work</a>
+      <a href="#offer">What you get</a>
+      <a href="#start">Start anywhere</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap hero-grid">
+    <div class="eyebrow">Technology and AI for small business</div>
+    <h1>Big-firm rigor for small businesses. <em>No problem is too small.</em></h1>
+    <p class="lead">We study how your business really runs, find where technology and AI can help, and deliver the fix. Sometimes that is a website. Sometimes it is a full technology implementation. You get one team across the whole range.</p>
+    <div class="btns">
+      <a class="btn btn-solid" href="#contact">Talk with us</a>
+      <a class="btn btn-line" href="#how">How we work</a>
+    </div>
+  </div>
+  <div class="dashes" aria-hidden="true"></div>
+</header>
+
+<main>
+  <section id="how">
+    <div class="wrap stack">
+      <div class="stack-head">
+        <div class="eyebrow">How we work</div>
+        <h2 class="h2">We start with your process, not a product.</h2>
+        <p>Large firms begin with analysis before they recommend anything. We do the same, sized for a business with a handful of people or a few hundred.</p>
+      </div>
+      <ol class="steps" style="list-style:none;margin:0;padding:0">
+        <li class="step">
+          <div class="step-n" aria-hidden="true">1</div>
+          <h3>Map the current process</h3>
+          <p>We sit with your team and document how work actually flows today: the tools, the handoffs, the spreadsheets and the workarounds.</p>
+        </li>
+        <li class="step">
+          <div class="step-n" aria-hidden="true">2</div>
+          <h3>Find where technology helps</h3>
+          <p>We rank the opportunities by effort and payoff, so you see what to fix first and what can wait.</p>
+        </li>
+        <li class="step">
+          <div class="step-n" aria-hidden="true">3</div>
+          <h3>Choose and negotiate</h3>
+          <p>We compare the options, including our own, and negotiate with outside vendors on your behalf.</p>
+        </li>
+        <li class="step">
+          <div class="step-n" aria-hidden="true">4</div>
+          <h3>Build, connect and run</h3>
+          <p>We implement the solution, train your people, and stay on to manage it for as long as you want us to.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="offer" id="offer">
+    <div class="wrap stack">
+      <div class="stack-head">
+        <div class="eyebrow">What you get</div>
+        <h2 class="h2">Four ways we solve the problem.</h2>
+        <p>We recommend whichever fits, even when it is not ours.</p>
+      </div>
+      <div class="cards">
+        <article class="card c-blue">
+          <div class="tag">Our product</div>
+          <h3>Software we build</h3>
+          <p>A product designed by us for common small business needs, supported by the people who made it.</p>
+        </article>
+        <article class="card c-cyan">
+          <div class="tag">Consulting</div>
+          <h3>Process and technology consulting</h3>
+          <p>Process reviews, technology roadmaps and project leadership, with the discipline of a large consulting firm and the scope scaled to your business.</p>
+        </article>
+        <article class="card c-navy">
+          <div class="tag">Vendors</div>
+          <h3>Vendor selection and negotiation</h3>
+          <p>We read the contracts, benchmark the price and negotiate with outside software and service vendors, so you buy what you need on fair terms.</p>
+        </article>
+        <article class="card c-yellow">
+          <div class="tag">AI agents</div>
+          <h3>Standard AI agents for your existing software</h3>
+          <p>Proven, standard AI agents that work with the tools you already use, so you can start saving time without replacing anything.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="start">
+    <div class="wrap stack">
+      <div class="stack-head">
+        <div class="eyebrow">Start anywhere</div>
+        <h2 class="h2">Start where you are.</h2>
+        <p>Every engagement begins with a conversation, and the size is yours to choose. Begin at any step, and move up or down as your needs change.</p>
+      </div>
+      <ol class="ladder">
+        <li class="rung">
+          <h3>Your website</h3>
+          <p>We create it, or take over managing the one you have.</p>
+        </li>
+        <li class="rung">
+          <h3>One slow process</h3>
+          <p>We find the manual step that costs you hours each week and fix it.</p>
+        </li>
+        <li class="rung">
+          <h3>AI on your current tools</h3>
+          <p>We add standard AI agents to the software you already use.</p>
+        </li>
+        <li class="rung">
+          <h3>Technology purchases</h3>
+          <p>We select, price and negotiate your vendors and contracts.</p>
+        </li>
+        <li class="rung">
+          <h3>Full implementation</h3>
+          <p>We plan and deliver a complete technology implementation, start to finish.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap band-grid">
+      <h2>No problem is too small.</h2>
+      <p>A broken spreadsheet costs a small business real hours every week. We give it the same care a large firm gives a major program, and we tell you plainly when the best answer is a simple one.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-copy">
+        <h2 class="h2">Tell us what is slowing you down.</h2>
+        <p>Describe the problem in a few sentences. We will tell you whether we can help, what it would take, and where to look if we are not the right fit.</p>
+      </div>
+      <div class="contact-cta">
+        <a class="btn btn-solid" href="mailto:info@blueskyadvisors.pro?subject=Technology%20and%20AI%20for%20my%20business">Email us</a>
+        <div class="email"><a href="mailto:info@blueskyadvisors.pro">info@blueskyadvisors.pro</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <strong>Bluesky Advisors</strong>
+    <div>&copy; 2026 Bluesky Advisors. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
