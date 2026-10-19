@@ -291,7 +291,7 @@ footer{background:var(--navy);border-top:1px solid #263B6A;color:#A9BDE0;font-si
 
             <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_honey" id="honey" tabindex="-1" autocomplete="off"></label></div>
 
-            <label class="consent"><input type="checkbox" id="fconsent"><span>I agree that Bluesky Advisors may contact me about this request using the details above, and that my answers will be emailed to Bluesky Advisors through a form service so the team can prepare for the call.</span></label>
+            <label class="consent"><input type="checkbox" id="fconsent"><span>I agree that Bluesky Advisors may contact me about this request using the details above, and that my answers will be emailed to Bluesky Advisors through a form service so the team can prepare for the call. I also agree to receive a copy of my snapshot by email.</span></label>
 
             <div class="row-btns">
               <button class="btn btn-blue" type="submit" id="send">Request my call</button>
@@ -522,7 +522,7 @@ footer{background:var(--navy);border-top:1px solid #263B6A;color:#A9BDE0;font-si
     var data={
       _subject:'New Protection Check: '+name+(hasPartner()?' (with spouse or partner)':''),
       _template:'table', _captcha:'false', _replyto:email,
-      'Name':name,'Email':email,'Phone':phone||'(not given)',
+      'Name':name,'email':email,'Phone':phone||'(not given)',
       'Preferred call type':pref,
       'Preferred days':checked('days').join(', ')||'(any)',
       'Preferred times':checked('times').join(', ')||'(any)',
@@ -538,12 +538,21 @@ footer{background:var(--navy);border-top:1px solid #263B6A;color:#A9BDE0;font-si
     data['Note']=$('#fnote').value.trim()||'(none)';
     data['Page']=location.href;
 
+    var reply='Hello '+name+',\n\nThank you for taking the Bluesky Advisors Family Protection Check. Here is your snapshot:\n\n'
+      +rowsNow.map(function(r){return '- '+r.t+': '+BADGE[r.s]+'. '+r.n}).join('\n')
+      +'\n\nGood next steps:\n'+nextSteps(rowsNow).map(function(t,i){return (i+1)+'. '+t}).join('\n')
+      +'\n\nWe have your call request and will be in touch to confirm a time. Questions? Reply to this email or write to info@blueskyadvisors.pro.\n\nThis snapshot is general education based only on your answers. It is not financial, insurance, legal or tax advice, and it does not recommend any product.\n\nBluesky Advisors';
+    var withCopy=JSON.parse(JSON.stringify(data));withCopy._autoresponse=reply;
+    function post(d){
+      return fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(d)})
+      .then(function(r){return r.json().catch(function(){return {}}).then(function(j){if(!r.ok||String(j.success)==='false')throw new Error(j.message||'failed');return j})});
+    }
     var btn=$('#send');btn.disabled=true;btn.textContent='Sending...';
-    fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
-      .then(function(r){return r.json().catch(function(){return {}}).then(function(j){if(!r.ok||String(j.success)==='false')throw new Error(j.message||'failed');return j})})
+    // Try with the emailed snapshot copy first; if the service rejects that, still deliver the request.
+    post(withCopy).catch(function(){return post(data)})
       .then(function(){
         $('#cform').querySelectorAll('input,select,textarea,button').forEach(function(x){x.disabled=true});
-        setStatus('ok','<b>Thank you, '+name.replace(/[<>&]/g,'')+'.</b> We have your request and will be in touch at '+email.replace(/[<>&]/g,'')+' to confirm a time.');
+        setStatus('ok','<b>Thank you, '+name.replace(/[<>&]/g,'')+'.</b> We have your request and will be in touch at '+email.replace(/[<>&]/g,'')+' to confirm a time. We are also emailing you a copy of your snapshot.');
         btn.textContent='Sent';
       })
       .catch(function(err){
