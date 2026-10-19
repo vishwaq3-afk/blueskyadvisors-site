@@ -540,9 +540,11 @@ footer{background:var(--navy);border-top:1px solid #263B6A;color:#A9BDE0;font-si
         setStatus('ok','<b>Thank you, '+name.replace(/[<>&]/g,'')+'.</b> We have your request and will be in touch at '+email.replace(/[<>&]/g,'')+' to confirm a time.');
         btn.textContent='Sent';
       })
-      .catch(function(){
+      .catch(function(err){
         btn.disabled=false;btn.textContent='Request my call';
-        setStatus('bad','We could not send this just now, and nothing has been received. Please try again, or email us directly at <a href="mailto:info@blueskyadvisors.pro?subject=Call%20request">info@blueskyadvisors.pro</a>.');
+        if(window.console)console.error('Form send failed:',err);
+        var why=(err&&err.message&&err.message!=='failed'&&err.message!=='Failed to fetch')?'<br><small>Details: '+String(err.message).replace(/[<>&]/g,'')+'</small>':'';
+        setStatus('bad','We could not send this just now, and nothing has been received. Please try again, or email us directly at <a href="mailto:info@blueskyadvisors.pro?subject=Call%20request">info@blueskyadvisors.pro</a>.'+why);
       });
   });
 })();
