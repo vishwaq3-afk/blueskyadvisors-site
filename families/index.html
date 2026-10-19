@@ -285,6 +285,8 @@ footer{background:var(--navy);border-top:1px solid #263B6A;color:#A9BDE0;font-si
               <div class="field"><label for="fname">Your name</label><input type="text" id="fname" name="name" autocomplete="name"></div>
               <div class="field"><label for="femail">Email</label><input type="email" id="femail" name="email" autocomplete="email"></div>
               <div class="field"><label for="fphone">Phone <span class="hint">(needed for a phone call)</span></label><input type="tel" id="fphone" name="phone" autocomplete="tel"></div>
+              <div class="field"><label for="fstate">State where you live</label><select id="fstate" name="state" autocomplete="address-level1"><option value="">Select your state</option><option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option><option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option><option>District of Columbia</option><option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option><option>Outside the United States</option></select></div>
+              <div class="field"><label for="fcity">City or ZIP code <span class="hint">(optional)</span></label><input type="text" id="fcity" name="city" autocomplete="postal-code"></div>
               <div class="field" id="sname-wrap" hidden><label for="sname">Spouse or partner's first name <span class="hint">(optional)</span></label><input type="text" id="sname" name="spouse_name"></div>
             </div>
             <div class="field"><label for="fnote">Anything you want us to know? <span class="hint">(optional)</span></label><textarea id="fnote" name="note" rows="3" maxlength="800"></textarea></div>
@@ -512,6 +514,7 @@ footer{background:var(--navy);border-top:1px solid #263B6A;color:#A9BDE0;font-si
     $$('#cform .err').forEach(function(x){x.classList.remove('err')});
     if(!pref){bad.push('how you would like to talk');$('#f-pref').classList.add('err')}
     if(!name){bad.push('your name');$('#fname').classList.add('err')}
+    if(!$('#fstate').value){bad.push('your state');$('#fstate').classList.add('err')}
     if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){bad.push('a valid email');$('#femail').classList.add('err')}
     if(pref==='Phone call'&&!phone){bad.push('a phone number');$('#fphone').classList.add('err')}
     if(!$('#fconsent').checked)bad.push('your consent');
@@ -527,6 +530,7 @@ footer{background:var(--navy);border-top:1px solid #263B6A;color:#A9BDE0;font-si
       'Preferred days':checked('days').join(', ')||'(any)',
       'Preferred times':checked('times').join(', ')||'(any)',
       'Time zone':$('#tz').value||'(not given)',
+      'State of residence':$('#fstate').value,'City or ZIP':$('#fcity').value.trim()||'(not given)',
       'Household':lab('status')
     };
     if(hasPartner()){
