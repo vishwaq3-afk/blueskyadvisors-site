@@ -334,8 +334,12 @@ footer{background:var(--navy);border-top:1px solid #263B6A;color:#A9BDE0;font-si
       ['most','Most of them'],['some','Some'],['little','Very little'],['unsure','Not sure']]},
     {id:'paper', g:'you', type:'single', text:'Do you have a will, and a named guardian if you have children?', opts:[
       ['both','Yes, both'],['part','Some of it'],['none','Not yet'],['unsure','Not sure']]},
+    {id:'sEmp', g:'sp', type:'single', text:'What is your spouse or partner\'s work situation?', opts:[
+      ['ft','Employed full time'],['pt','Employed part time'],['self','Self-employed or own business'],['home','Not working outside the home'],['between','Between jobs or retired']]},
     {id:'sIncome', g:'sp', type:'single', text:'How is household income shared between you and your spouse or partner?', opts:[
       ['me','Mostly mine'],['even','About even'],['them','Mostly theirs'],['skip','I would rather discuss it']]},
+    {id:'sHealth', g:'sp', type:'single', text:'How is your spouse or partner covered for health insurance?', opts:[
+      ['own','Through their own employer'],['mine','Through my employer'],['market','Marketplace or a private plan'],['none','No health coverage'],['unsure','Not sure']]},
     {id:'sCov', g:'sp', type:'single', text:'What life insurance does your spouse or partner have?', opts:[
       ['none','None'],['employer','Only through their employer'],['personal','A personal policy'],['both','Employer plus a personal policy'],['unsure','Not sure']]},
     {id:'sBene', g:'sp', type:'single', text:'Do you each know who is named as beneficiary on the other\'s accounts and policies?', opts:[
@@ -440,11 +444,13 @@ footer{background:var(--navy);border-top:1px solid #263B6A;color:#A9BDE0;font-si
       var bad=0,open=0;
       ['sBene','sManage'].forEach(function(k){var v=A[k];if(v==='no'||v==='one'||v==='part')bad++;else if(v==='unsure')open++});
       var spLow=(A.sCov==='none'||A.sCov==='employer')&&A.sIncome!=='me';
+      if(A.sHealth==='none')bad++;
+      if((A.sEmp==='self'||A.sEmp==='home'||A.sEmp==='between')&&(A.sCov==='none'||A.sCov==='employer'))spLow=true;
       if(spLow)bad++;
       if(A.sCov==='unsure')open++;
       if(A.sTalk==='rare')bad++;
       var s=bad?'warn':(open?'open':'good');
-      var n=bad?'A few things between you two are worth lining up: beneficiaries, access to accounts, and your spouse or partner\'s own coverage.':open?'Some of this is still unknown. A shared review would settle it.':'You are both in good shape on coverage, beneficiaries and access.';
+      var n=bad?'A few things between you two are worth lining up: beneficiaries, access to accounts, and your spouse or partner\'s own life and health coverage.':open?'Some of this is still unknown. A shared review would settle it.':'You are both in good shape on coverage, beneficiaries and access.';
       add('Your household as a team',s,n);
     }
     return rows;
