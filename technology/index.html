@@ -128,6 +128,33 @@ footer a{color:#fff}
   .lead,.stack-head p,.band p,.contact-copy p{font-size:17px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Affiliations */
+.aff{background:#EEF4FF;color:#07163D;font-family:'DM Sans',system-ui,sans-serif}
+.aff *{box-sizing:border-box}
+.aff-in{max-width:1180px;margin:0 auto;padding:88px 24px}
+.aff-head{display:flex;flex-direction:column;gap:16px;max-width:760px;margin-bottom:40px}
+.aff-eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#1B5BFF}
+.aff-head h2{margin:0;font-family:'Unbounded',system-ui,sans-serif;font-size:34px;line-height:1.15;font-weight:600;letter-spacing:-.025em;text-wrap:balance;color:#07163D}
+.aff-head p{margin:0;font-size:19px;line-height:1.6;color:#2B3F66}
+.aff-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
+.aff-card{display:flex;flex-direction:column;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 1px 0 rgba(7,22,61,.06),0 10px 30px -18px rgba(7,22,61,.35)}
+.aff-logo{background:#07163D;height:116px;display:flex;align-items:center;justify-content:center;padding:24px}
+.aff-logo img{height:36px;width:auto;display:block}
+.aff-body{display:flex;flex-direction:column;gap:10px;padding:28px 28px 30px;flex:1}
+.aff-pill{align-self:flex-start;padding:5px 12px;border-radius:999px;background:#FFC93C;color:#07163D;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.aff-body h3{margin:0;font-family:'Unbounded',system-ui,sans-serif;font-size:22px;line-height:1.2;font-weight:600;letter-spacing:-.02em;color:#07163D}
+.aff-cat{margin:0;font-size:14px;font-weight:700;letter-spacing:.04em;color:#1B5BFF}
+.aff-body p.aff-desc{margin:0 0 14px;color:#2B3F66;font-size:16px;line-height:1.6}
+.aff-btn{margin-top:auto;align-self:flex-start;display:inline-block;padding:14px 26px;border-radius:999px;background:#1B5BFF;color:#fff;font-weight:700;font-size:16px;text-decoration:none}
+.aff-btn:hover{background:#07163D;color:#fff}
+.aff-btn:focus-visible{outline:3px solid #FFC93C;outline-offset:3px}
+.aff-body .aff-spacer{flex:1}
+.aff-soon{background:transparent;box-shadow:none;border:2px dashed #9DB6EE;align-items:center;justify-content:center;text-align:center;min-height:260px;padding:32px;gap:10px}
+.aff-soon h3{margin:0;font-family:'Unbounded',system-ui,sans-serif;font-size:20px;font-weight:600;letter-spacing:-.02em;color:#07163D}
+.aff-soon p{margin:0;color:#2B3F66;font-size:16px;max-width:260px}
+.aff-soon .plus{width:44px;height:44px;border-radius:50%;background:#FFC93C;color:#07163D;font-weight:700;font-size:26px;line-height:44px;margin-bottom:6px}
+@media (max-width:720px){.aff-in{padding:60px 24px}.aff-head h2{font-size:27px}.aff-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -198,6 +225,7 @@ footer a{color:#fff}
         <div class="eyebrow">What you get</div>
         <h2 class="h2">Four ways we solve the problem.</h2>
         <p>We recommend whichever fits, even when it is not ours.</p>
+        <p style="font-size:15px;line-height:1.55;max-width:760px;margin-top:4px;padding:16px 20px;background:#FFFFFF;border-left:6px solid #FFC93C;border-radius:0 14px 14px 0"><strong style="color:#07163D">Disclosure:</strong> some software vendors pay us a commission when you sign up through our link. It never changes your price or what we recommend, and you can always sign up directly. <a href="/technology/how-we-are-paid/">See how we are paid.</a></p>
       </div>
       <div class="cards">
         <article class="card c-blue">
@@ -225,7 +253,7 @@ footer a{color:#fff}
     </div>
   </section>
 
-  <section id="start">
+<section id="start">
     <div class="wrap stack">
       <div class="stack-head">
         <div class="eyebrow">Start anywhere</div>
@@ -264,6 +292,34 @@ footer a{color:#fff}
     </div>
   </section>
 
+  <section class="aff" id="affiliations">
+    <div class="aff-in">
+      <div class="aff-head">
+        <div class="aff-eyebrow">Affiliations</div>
+        <h2>Tools we recommend, and how we are connected to them.</h2>
+        <p>We are affiliates of the companies below. We recommend a tool when it fits your business, then help you set it up and keep it running.</p>
+      </div>
+      <div class="aff-grid">
+        <article class="aff-card">
+          <div class="aff-logo"><img src="/assets/make/Make-White.svg" alt="Make" width="170" height="35"></div>
+          <div class="aff-body">
+            <span class="aff-pill">Make affiliate</span>
+            <h3>Make</h3>
+            <p class="aff-cat">Workflow automation and AI agents</p>
+            <p class="aff-desc">Connects the apps you already use so routine work runs on its own, from lead intake to invoicing. We help owner-led businesses choose the right automations, build them and keep them running.</p>
+            <a class="aff-btn" href="https://www.make.com/en/register" rel="sponsored noopener" target="_blank">Try Make</a>
+          </div>
+        </article>
+        <article class="aff-card aff-soon">
+          <div class="plus" aria-hidden="true">+</div>
+          <h3>More on the way</h3>
+          <p>We are adding more affiliations. Check back, or ask us what fits your business.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+
   <section class="contact" id="contact">
     <div class="wrap contact-grid">
       <div class="contact-copy">
@@ -284,6 +340,7 @@ footer a{color:#fff}
   <div class="wrap foot">
     <strong>Bluesky Advisors</strong>
     <div>Allentown, PA 18031 &middot; <a href="tel:+14847641194">484-764-1194</a> &middot; <a href="mailto:info@blueskyadvisors.pro">info@blueskyadvisors.pro</a></div>
+    <div><a href="/technology/services/">Our services</a> &middot; <a href="/technology/how-we-are-paid/">How we are paid</a></div>
     <div>&copy; 2026 Bluesky Advisors. All rights reserved.</div>
   </div>
 </footer>

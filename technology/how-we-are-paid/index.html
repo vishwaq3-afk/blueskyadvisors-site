@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How We Are Paid | Bluesky Advisors</title>
+<meta name="description" content="How Bluesky Advisors is paid, which software vendors pay us a commission, and the rules we follow when we recommend a tool.">
+<link rel="canonical" href="https://blueskyadvisors.pro/technology/how-we-are-paid/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='6' fill='%231B5BFF'/%3E%3Ccircle cx='18' cy='11' r='7' fill='%23FFC93C'/%3E%3Crect x='3' y='20' width='18' height='3.5' rx='1.75' fill='%2300D1FF'/%3E%3Crect x='13' y='25' width='18' height='3.5' rx='1.75' fill='%23FF6B5B'/%3E%3Crect x='6' y='30' width='18' height='3.5' rx='1.75' fill='%237CF2C1'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0}
+.ba{--blue:#1B5BFF;--navy:#07163D;--cyan:#00D1FF;--coral:#FF6B5B;--mint:#7CF2C1;--sun:#FFC93C;--ice:#EEF4FF;--ink:#2B3F66;
+  width:100%;background:#fff;color:var(--navy);font-family:'DM Sans',system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.ba *{box-sizing:border-box}
+.ba a{color:var(--blue)}
+.ba a:hover{color:var(--navy)}
+.ba a:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.ba h1,.ba h2,.ba h3{font-family:'Unbounded',system-ui,sans-serif;margin:0;font-weight:600;text-wrap:balance}
+.ba p{margin:0}
+.ba .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.ba .eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.ba .btn{display:inline-block;padding:15px 28px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none}
+.ba .btn-sun{background:var(--sun);color:var(--navy)}
+.ba .btn-sun:hover{background:#fff;color:var(--navy)}
+.ba .btn-ghost{border:2px solid #fff;color:#fff;padding:13px 28px}
+.ba .btn-ghost:hover{background:#fff;color:var(--blue)}
+.ba .hero{background:var(--blue);color:#fff;overflow:hidden}
+.ba .nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-top:22px}
+.ba .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.ba .brand:hover{color:#fff}
+.ba .logo{display:flex;align-items:center;justify-content:center;padding:5px;background:var(--blue);border:3px solid #000;border-radius:8px}
+.ba .brand span{font-family:'Unbounded',system-ui,sans-serif;font-size:18px;font-weight:600;letter-spacing:-.01em}
+.ba .links{display:flex;flex-wrap:wrap;align-items:center;gap:28px;font-size:15px;font-weight:500}
+.ba .links a{color:#fff;text-decoration:none}
+.ba .links a:hover{color:var(--sun)}
+.ba .hero-grid{display:flex;flex-direction:column;gap:24px;padding:64px 0 80px;max-width:820px}
+.ba .hero-grid .eyebrow{color:#BFF1FF}
+.ba .hero h1{font-size:46px;line-height:1.12;letter-spacing:-.03em}
+.ba .hero h1 em{font-style:normal;color:var(--sun)}
+.ba .hero p.lead{font-size:19px;color:#E8F0FF}
+.ba .dash{height:14px;background-image:repeating-linear-gradient(90deg,var(--cyan) 0,var(--cyan) 3px,transparent 3px,transparent 24px)}
+.ba section{padding:88px 0}
+.ba .sec-head{display:flex;flex-direction:column;gap:16px;max-width:760px;margin-bottom:40px}
+.ba .sec-head h2{font-size:34px;line-height:1.15;letter-spacing:-.025em}
+.ba .sec-head p{font-size:19px;color:var(--ink)}
+.ba .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
+.ba .card{background:#fff;border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:12px;border-top:8px solid var(--blue);box-shadow:0 1px 0 rgba(7,22,61,.06),0 10px 30px -18px rgba(7,22,61,.35)}
+.ba .card.c-cyan{border-top-color:var(--cyan)}
+.ba .card.c-coral{border-top-color:var(--coral)}
+.ba .card.c-sun{border-top-color:var(--sun)}
+.ba .card h3{font-size:20px;line-height:1.25;letter-spacing:-.02em}
+.ba .card p{color:var(--ink)}
+.ba .s-ice{background:var(--ice)}
+.ba table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px -18px rgba(7,22,61,.35);font-size:16px}
+.ba th,.ba td{text-align:left;padding:16px 20px;vertical-align:top}
+.ba th{background:var(--navy);color:#fff;font-family:'Unbounded',system-ui,sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em}
+.ba td{border-top:1px solid #DCE6FA;color:var(--ink)}
+.ba td b{color:var(--navy)}
+.ba .tablewrap{overflow-x:auto}
+.ba .rules{counter-reset:r;list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:20px;max-width:820px}
+.ba .rules li{counter-increment:r;display:flex;gap:18px;align-items:flex-start;font-size:18px}
+.ba .rules li::before{content:counter(r);flex:none;width:38px;height:38px;border-radius:50%;background:var(--sun);color:var(--navy);font-family:'Unbounded',system-ui,sans-serif;font-weight:600;font-size:15px;display:flex;align-items:center;justify-content:center}
+.ba .rules b{display:block;color:var(--navy)}
+.ba .rules span{color:var(--ink)}
+.ba .updated{margin-top:32px;font-size:14px;color:var(--ink)}
+.ba .s-contact{background:var(--navy);color:#fff;padding:80px 0}
+.ba .contact-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:40px}
+.ba .contact-row .l{flex:1 1 480px;display:flex;flex-direction:column;gap:16px}
+.ba .contact-row h2{font-size:34px;line-height:1.15;letter-spacing:-.025em}
+.ba .contact-row p{max-width:560px;font-size:19px;color:#C9DAF5}
+.ba .contact-row .r{flex:0 1 340px;display:flex;flex-direction:column;gap:14px}
+.ba .contact-row .r .btn{text-align:center}
+.ba .contact-row .r div{font-size:15px;color:#C9DAF5}
+.ba .contact-row .r a.plain{color:#fff}
+.ba footer{background:var(--navy);border-top:1px solid #263B6A;color:#A9BDE0}
+.ba footer .wrap{padding-top:32px;padding-bottom:48px;display:flex;flex-direction:column;gap:12px;font-size:13px}
+.ba footer .fb{font-family:'Unbounded',system-ui,sans-serif;font-size:15px;font-weight:600;color:#fff}
+.ba footer a{color:#A9BDE0}
+@media (max-width:720px){
+  .ba .hero h1{font-size:32px}
+  .ba .sec-head h2,.ba .contact-row h2{font-size:27px}
+  .ba section{padding:60px 0}
+  .ba .links{gap:18px}
+  .ba .card{padding:26px}
+  .ba .rules li{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="ba" id="top">
+
+<header class="hero">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="/">
+        <div class="logo"><svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="12" r="9" fill="#FFC93C"/><rect x="2" y="21" width="22" height="4" rx="2" fill="#00D1FF"/><rect x="12" y="26" width="22" height="4" rx="2" fill="#FF6B5B"/><rect x="5" y="31" width="22" height="4" rx="2" fill="#7CF2C1"/></svg></div>
+        <span>Bluesky Advisors</span>
+      </a>
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/technology/">Technology</a>
+        <a href="/technology/services/">Our services</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+    <div class="hero-grid">
+      <div class="eyebrow">Transparency</div>
+      <h1>How we are paid. <em>So you can trust what we recommend.</em></h1>
+      <p class="lead">Advice is only worth something if you know who benefits from it. Here is exactly how money flows to us, and the rules we follow when we recommend a tool.</p>
+    </div>
+  </div>
+  <div class="dash"></div>
+</header>
+
+<main>
+
+<section id="pay">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:#1B5BFF">The basics</div>
+      <h2>Two ways we earn money.</h2>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <h3>1. Fees from you</h3>
+        <p>You pay us for our time and our work. The scope and the fee are agreed in writing before we start. This is our main source of income.</p>
+      </article>
+      <article class="card c-sun">
+        <h3>2. Commissions from some vendors</h3>
+        <p>Some software companies pay us a commission when someone signs up through our referral link. The commission comes from the vendor. It does not raise the price you pay.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="s-ice" id="vendors">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:#1B5BFF">Vendor relationships</div>
+      <h2>Who pays us a commission today.</h2>
+      <p>We keep this list current. If a company is not on it, it is not paying us.</p>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Company</th><th>What it does</th><th>Our relationship</th></tr></thead>
+        <tbody>
+          <tr><td><b>Make</b></td><td>Workflow automation and AI agents that connect the apps you already use</td><td>We are a Make affiliate and may earn a commission on paid plans started through our link. We are not an official Make partner.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="updated">Last updated November 2, 2026.</p>
+  </div>
+</section>
+
+<section id="rules">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:#1B5BFF">Our rules</div>
+      <h2>What we promise when we recommend a tool.</h2>
+    </div>
+    <ol class="rules">
+      <li><div><b>Fit comes first.</b><span>We recommend the tool that suits your business, even when it pays us nothing or pays someone else.</span></div></li>
+      <li><div><b>We tell you every time.</b><span>When a recommendation includes our link, we say so right next to it, in our proposals and in our messages.</span></div></li>
+      <li><div><b>You can skip our link.</b><span>You are free to sign up directly with any vendor. Just ask and we will tell you how.</span></div></li>
+      <li><div><b>We name the alternatives.</b><span>When a better option exists, we say so, whether or not we earn anything from it.</span></div></li>
+      <li><div><b>We describe the relationship accurately.</b><span>We call ourselves an affiliate when we are one, and a partner only when the company has accepted us as one.</span></div></li>
+    </ol>
+  </div>
+</section>
+
+</main>
+
+<section class="s-contact" id="contact">
+  <div class="wrap contact-row">
+    <div class="l">
+      <h2>Questions about how we work?</h2>
+      <p>Ask us anything about who pays us and why we recommend what we do. We will give you a straight answer.</p>
+    </div>
+    <div class="r">
+      <a class="btn btn-sun" href="mailto:info@blueskyadvisors.pro?subject=Question%20about%20how%20you%20are%20paid">Email us</a>
+      <div><a class="plain" href="mailto:info@blueskyadvisors.pro">info@blueskyadvisors.pro</a> &nbsp;&middot;&nbsp; <a class="plain" href="tel:+14847641194">484-764-1194</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fb">Bluesky Advisors</div>
+    <div>Allentown, PA 18031 &nbsp;&middot;&nbsp; 484-764-1194 &nbsp;&middot;&nbsp; <a href="mailto:info@blueskyadvisors.pro">info@blueskyadvisors.pro</a></div>
+    <div><a href="/technology/">Technology</a> &nbsp;&middot;&nbsp; <a href="/technology/services/">Our services</a> &nbsp;&middot;&nbsp; <a href="/technology/how-we-are-paid/">How we are paid</a></div>
+    <div>&copy; 2026 Bluesky Advisors. All rights reserved.</div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
