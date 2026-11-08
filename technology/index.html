@@ -155,6 +155,16 @@ footer a{color:#fff}
 .aff-soon p{margin:0;color:#2B3F66;font-size:16px;max-width:260px}
 .aff-soon .plus{width:44px;height:44px;border-radius:50%;background:#FFC93C;color:#07163D;font-weight:700;font-size:26px;line-height:44px;margin-bottom:6px}
 @media (max-width:720px){.aff-in{padding:60px 24px}.aff-head h2{font-size:27px}.aff-grid{grid-template-columns:1fr}}
+
+/* Demo */
+.demo{background:var(--pale)}
+.demo-video{border-radius:20px;overflow:hidden;border:3px solid var(--navy);background:var(--navy);max-width:960px}
+.demo-video video{display:block;width:100%;height:auto}
+.demo-note{font-size:14px;color:var(--ink);margin-top:-32px}
+.demo-works{font-size:16px;color:var(--ink);max-width:760px;padding:16px 20px;background:#fff;border-left:6px solid var(--yellow);border-radius:0 14px 14px 0}
+.btn-navline{border:2px solid var(--navy);color:var(--navy);padding:13px 28px}
+.btn-navline:hover{background:var(--navy);color:var(--white)}
+@media (max-width:640px){.demo-note{margin-top:-24px}}
 </style>
 </head>
 <body>
@@ -171,6 +181,7 @@ footer a{color:#fff}
       <a href="#offer">What you get</a>
       <a href="/technology/services/">Our services</a>
       <a href="#start">Start anywhere</a>
+      <a href="#demo">See it in action</a>
       <a href="/technology/check/">Take the quick check</a>
     </nav>
   </div>
@@ -282,6 +293,40 @@ footer a{color:#fff}
           <p>We plan and deliver a complete technology implementation, start to finish.</p>
         </li>
       </ol>
+    </div>
+  </section>
+
+  <section class="demo" id="demo">
+    <div class="wrap stack">
+      <div class="stack-head">
+        <div class="eyebrow">See it in action</div>
+        <h2 class="h2">An inbox that sorts itself.</h2>
+        <p>Here is one of the first things we set up for owner-led businesses. Every new email is read, labeled, summarized and logged in your tracker, and quote requests get a reply drafted for your review. Nothing is sent without your approval.</p>
+      </div>
+      <div class="demo-video">
+        <video controls preload="metadata" playsinline poster="/assets/demo/ai-inbox-assistant-poster.jpg" aria-label="Fifty-second walkthrough of the AI Inbox Assistant">
+          <source src="/assets/demo/ai-inbox-assistant-demo.mp4" type="video/mp4">
+          Your browser cannot play this video. <a href="/assets/demo/ai-inbox-assistant-demo.mp4">Download it here</a>.
+        </video>
+      </div>
+      <p class="demo-note">Illustrative demo using a fictional business and sample data.</p>
+      <div class="cards">
+        <article class="card c-blue">
+          <div class="tag">Example 1</div>
+          <h3>The AI Inbox Assistant</h3>
+          <p>Quotes, invoices, scheduling requests and promotions are sorted automatically. You get a one-line summary, the next action and the due date for every message, so you only open the ones that need you.</p>
+        </article>
+        <article class="card c-yellow">
+          <div class="tag">Example 2</div>
+          <h3>The Instant Lead Responder</h3>
+          <p>When a customer fills out your contact or quote form, the request is read, logged and rated for urgency. A personal reply is drafted for your approval, and urgent jobs alert you right away.</p>
+        </article>
+      </div>
+      <p class="demo-works"><strong>Works with the tools you already use.</strong> Email: Gmail, Outlook and most other email accounts. Trackers: Google Sheets, Excel, Airtable, Notion and similar. If you use something else, we will tell you plainly whether it connects.</p>
+      <div class="btns" style="padding-top:0">
+        <a class="btn" style="background:#1B5BFF;color:#FFFFFF" href="mailto:info@blueskyadvisors.pro?subject=30-minute%20automation%20walkthrough">Book a 30-minute walkthrough</a>
+        <a class="btn btn-navline" href="/technology/check/">Take the quick check</a>
+      </div>
     </div>
   </section>
 
