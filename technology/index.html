@@ -160,6 +160,16 @@ footer a{color:#fff}
 .demo{background:var(--pale)}
 .demo-video{border-radius:20px;overflow:hidden;border:3px solid var(--navy);background:var(--navy);max-width:960px}
 .demo-video video{display:block;width:100%;height:auto}
+.demo-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:-24px}
+.demo-tab{font:inherit;font-weight:700;font-size:16px;padding:12px 22px;border-radius:999px;border:2px solid var(--navy);background:transparent;color:var(--navy);cursor:pointer}
+.demo-tab:hover{background:#fff}
+.demo-tab[aria-selected="true"]{background:var(--navy);color:var(--white)}
+.demo-tab:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.demo-tabs{display:none}
+.js .demo-tabs{display:flex}
+.js .demo-panel[hidden]{display:none}
+.demo-panel + .demo-panel{margin-top:-24px}
+.js .demo-panel + .demo-panel{margin-top:0}
 .demo-note{font-size:14px;color:var(--ink);margin-top:-32px}
 .demo-works{font-size:16px;color:var(--ink);max-width:760px;padding:16px 20px;background:#fff;border-left:6px solid var(--yellow);border-radius:0 14px 14px 0}
 .btn-navline{border:2px solid var(--navy);color:var(--navy);padding:13px 28px}
@@ -300,16 +310,30 @@ footer a{color:#fff}
     <div class="wrap stack">
       <div class="stack-head">
         <div class="eyebrow">See it in action</div>
-        <h2 class="h2">An inbox that sorts itself.</h2>
-        <p>Here is one of the first things we set up for owner-led businesses. Every new email is read, labeled, summarized and logged in your tracker, and quote requests get a reply drafted for your review. Nothing is sent without your approval.</p>
+        <h2 class="h2">See what automation looks like.</h2>
+        <p>Here are two of the first things we set up for owner-led businesses. In both, the work is done for you and a person approves anything that goes out to a customer. Pick a demo to watch.</p>
       </div>
-      <div class="demo-video">
-        <video controls preload="metadata" playsinline poster="/assets/demo/ai-inbox-assistant-poster.jpg" aria-label="Fifty-second walkthrough of the AI Inbox Assistant">
-          <source src="/assets/demo/ai-inbox-assistant-demo.mp4" type="video/mp4">
-          Your browser cannot play this video. <a href="/assets/demo/ai-inbox-assistant-demo.mp4">Download it here</a>.
-        </video>
+      <div class="demo-tabs" role="tablist" aria-label="Choose a demo">
+        <button class="demo-tab" role="tab" id="tab-inbox" aria-selected="true" aria-controls="panel-inbox" type="button">AI Inbox Assistant</button>
+        <button class="demo-tab" role="tab" id="tab-lead" aria-selected="false" aria-controls="panel-lead" type="button">Instant Lead Responder</button>
       </div>
-      <p class="demo-note">Illustrative demo using a fictional business and sample data.</p>
+      <div class="demo-panel" id="panel-inbox" role="tabpanel" aria-labelledby="tab-inbox">
+        <div class="demo-video">
+          <video controls preload="metadata" playsinline poster="/assets/demo/ai-inbox-assistant-poster.jpg" aria-label="Fifty-second walkthrough of the AI Inbox Assistant">
+            <source src="/assets/demo/ai-inbox-assistant-demo.mp4" type="video/mp4">
+            Your browser cannot play this video. <a href="/assets/demo/ai-inbox-assistant-demo.mp4">Download it here</a>.
+          </video>
+        </div>
+      </div>
+      <div class="demo-panel" id="panel-lead" role="tabpanel" aria-labelledby="tab-lead">
+        <div class="demo-video">
+          <video controls preload="none" playsinline poster="/assets/demo/lead-responder-poster.jpg" aria-label="Forty-seven second walkthrough of the Instant Lead Responder">
+            <source src="/assets/demo/lead-responder-demo.mp4" type="video/mp4">
+            Your browser cannot play this video. <a href="/assets/demo/lead-responder-demo.mp4">Download it here</a>.
+          </video>
+        </div>
+      </div>
+      <p class="demo-note">Illustrative demos using a fictional business and sample data.</p>
       <div class="cards">
         <article class="card c-blue">
           <div class="tag">Example 1</div>
@@ -390,5 +414,21 @@ footer a{color:#fff}
   </div>
 </footer>
 
+<script>
+(function(){
+  var root=document.getElementById('demo'); if(!root) return;
+  document.documentElement.classList.add('js');
+  var tabs=root.querySelectorAll('.demo-tab'), panels=root.querySelectorAll('.demo-panel');
+  function show(id){
+    tabs.forEach(function(t){t.setAttribute('aria-selected', String(t.getAttribute('aria-controls')===id));});
+    panels.forEach(function(p){
+      var on=p.id===id; p.hidden=!on;
+      if(!on){var v=p.querySelector('video'); if(v) v.pause();}
+    });
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){show(t.getAttribute('aria-controls'));});});
+  show('panel-inbox');
+})();
+</script>
 </body>
 </html>
